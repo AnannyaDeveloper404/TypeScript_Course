@@ -40,3 +40,5 @@ y = "str";
   if (typeof a === "string") a.toUpperCase();
   ```
 - `unknown` obeys typescript wheres `any` mean typescripts off
+- `void`:
+  - like a return type

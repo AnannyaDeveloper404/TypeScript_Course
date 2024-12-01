@@ -23,3 +23,26 @@ a = 12;
 a = "harsh";
 if (typeof a === "string")
     a.toUpperCase();
+// Void
+function abcd() {
+    console.log("hey");
+}
+// Null
+let d = null;
+let dd;
+dd = null;
+dd = "hello";
+// dd=11; error
+//Undefined
+let aaa;
+//Never
+// function def(): never {
+//   while (true) {}
+// }
+// def();
+// console.log("hey");
+//type inference
+let e = 12; //typescript can infer that e is number
+//Type Annotation
+let f; //Declaring the type of the variable in advance
+//Intersection
