@@ -87,3 +87,23 @@ class Bottle {
   color = "white";
 }
 let b1 = new Bottle(); //Object created
+//constructor
+class BottleMakerOld {
+  public name;
+  public price;
+  public isNew;
+  constructor(name: string, price: number, isNew: boolean = true) {
+    this.name = name;
+    this.price = price;
+    this.isNew = isNew;
+  }
+}
+//constructor shorthands
+class BottleMaker {
+  constructor(
+    public name: string,
+    public price: number,
+    public isNew: boolean = true
+  ) {}
+}
+let b3 = new BottleMaker("glass bottle", 120);
