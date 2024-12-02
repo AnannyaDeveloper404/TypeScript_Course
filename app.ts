@@ -49,4 +49,41 @@ let e = 12; //typescript can infer that e is number
 //Type Annotation
 let f: number | boolean | string; //Declaring the type of the variable in advance
 
+// Interface
+interface User {
+  name: string;
+  email: string;
+  password: string;
+  gender?: string; //gender is not required type(Optional)
+}
+function Employed(obj: User) {}
+//extend interface
+interface Admin extends User {
+  admin: boolean;
+}
+
+//Type aliases
+//It used to create new type of variable with the help of conditional operator
+type value = string | number | null;
+let v: value;
+
+function fgh(obj: value) {}
+
 //Intersection
+type User1 = {
+  name: string;
+  email: string;
+};
+type Admin1 = User & {
+  getDetails(user: string): void;
+};
+//Admin1 will possess User1's property along with getDetails function
+//  difference between interface ,type- * type keep merging if it is declared more than once .* Interface defines shape of object
+
+//class
+class Bottle {
+  radius = 120;
+  price = 100;
+  color = "white";
+}
+let b1 = new Bottle();//Object created
