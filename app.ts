@@ -11,6 +11,7 @@ enum UserRoles {
 } //access ENums  =>{UseRoles.ADMIN}
 //tuples
 let arr: [string, number] = ["harsh", 22];
+let coordinates: [number, number, number] = [10, 20, 30];
 //Any ,Unknown,Void ,Null, Undefined,Never
 let z: number; //type declaring
 z = 12;
@@ -74,7 +75,7 @@ type User1 = {
   name: string;
   email: string;
 };
-type Admin1 = User & {
+type Admin1 = User1 & {
   getDetails(user: string): void;
 };
 //Admin1 will possess User1's property along with getDetails function
@@ -107,3 +108,26 @@ class BottleMaker {
   ) {}
 }
 let b3 = new BottleMaker("glass bottle", 120);
+//Arrays
+let numArray: number[] = [1, 2, 34, 4];
+let charArray: string[] = ["a", "b"];
+
+// charArray.forEach((val) => val.length);
+//after applying the '.', string-related methods will pop-up
+// Type Narrowing
+function print(id: string | number) {
+  if (typeof id === "string") {
+    console.log("id is a string");
+  } else {
+    console.log("number");
+  }
+}
+// optional field
+interface optional {
+  name: string;
+  ph_no?: number;
+}
+let opt: optional = {
+  name: "Anna",
+};
+// Function
