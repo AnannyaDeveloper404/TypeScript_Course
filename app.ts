@@ -131,3 +131,28 @@ let opt: optional = {
   name: "Anna",
 };
 // Function
+function fun(a: number, b: number): number {
+  return a + b;
+}
+fun(2, 2);
+//function expression
+const divide = (a: number, b: number): number => {
+  return a / b;
+};
+//optional field
+function greet(username: string, greeting?: string) {
+  return `${username}+' '+${greeting ? greeting : ""}`; //ternary operation
+}
+//default parameter=value
+function DFLT(username: string, greeting: string = "HI") {
+  console.log(username + " " + greeting);
+}
+// if nothing passed into DFLT 's ment ,it will print 'HI' by  default,and if value is passed ,then the passed value will be rendered
+
+//function overloading
+function getLength(value: string): number;
+function getLength(value: any[]): number;
+function getLength(value: any): number {
+  return value.length;
+}
+//Rest Parameters
